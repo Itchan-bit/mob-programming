@@ -33,6 +33,6 @@ class Api::EmployeesController < ApplicationController
         end
 
     def employee_params
-        params.permit(:name, :first_name, :last_name)
+        params.require(:employee).permit(:name, :first_name, :last_name)
     end
 end
