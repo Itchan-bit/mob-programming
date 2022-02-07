@@ -7,9 +7,23 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
 
   <body>
-    <%= yield %>
+    <%
+=begin%>
+ <%= render "shared/navigation" %>
+    <%= render "shared/flash" %> 
+<%
+=end%>
+    <div class="header">
+      <%= image_tag "likha-logo.png", id: 'likha-logo' %>
+      <h1 id="title"> Leave Management System</h1>      
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
