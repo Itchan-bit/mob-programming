@@ -12,8 +12,16 @@
   </head>
 
   <body>
-    <%= render "shared/navigation" %>
-    <%= render "shared/flash" %>
+    <%
+=begin%>
+ <%= render "shared/navigation" %>
+    <%= render "shared/flash" %> 
+<%
+=end%>
+    <div class="header">
+      <%= image_tag "likha-logo.png", id: 'likha-logo' %>
+      <h1 id="title"> Leave Management System</h1>      
+    </div>
     <div class="container">
       <%= yield %>
     </div>

@@ -1,3 +1,32 @@
-#test{
-    color: red
+body {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-color: #FFFFF7;
+    flex-direction: column;
+    width: 100vw
+}
+#likha-logo {
+    width: 40px;
+    height: 40px
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    margin: 25px;
+    /* left: 0; */
+    /* position: absolute */
+}
+#title {
+    margin-left: 12px;
+    font-size: 32;
+    font-weight: 800;
+    color: #0F4C81;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
