@@ -1,10 +1,15 @@
+:root {
+    --likha-blue: #0F4C81;
+}
+
 body {
     display: flex;
     /* justify-content: center; */
     /* align-items: center; */
-    background-color: #FFFFF7;
+    background-color: #FFFFF7 !important;
     flex-direction: column;
-    width: 100vw
+    width: 100vw;
+    height: 100vh;
 }
 #likha-logo {
     width: 40px;
@@ -29,4 +34,50 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 100%;
+    width: 320px;
+}
+
+.form-label {
+    font-size: 0.85rem;
+    color: var(--likha-blue);
+    text-decoration: none;
+}
+
+.form-field {
+    border: 1px solid #cecece80;
+    border-radius: 2px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+    line-height: 1.2;
+    height: 43px;
+    width: 320px;
+    padding-left: 10px;
+}
+
+.actions {
+    margin-top: 34px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.form-submit {
+    background-color: var(--likha-blue);
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    padding: 7px 20px;
+    border-radius: 2px;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+}
+
+.absolute {
+    position: absolute;
+    bottom: 0;
+}
+
+.bold {
+    font-weight: 800;
 }
