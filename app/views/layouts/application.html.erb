@@ -18,6 +18,9 @@
     <%= render "shared/flash" %> 
 <%
 =end%>
+  <% if user_signed_in? %>
+    <div id="app"></div>
+  <% else %>
     <div class="header">
       <%= image_tag "likha-logo.png", id: 'likha-logo' %>
       <h1 id="title"> Leave Management System</h1>      
@@ -25,5 +28,6 @@
     <div class="container">
       <%= yield %>
     </div>
+  <% end %>
   </body>
 </html>

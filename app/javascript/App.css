@@ -1,0 +1,25 @@
+@import "antd/dist/antd.css";
+
+#app,
+#main-container {
+  height: 100%;
+}
+
+img.logo {
+  width: 100%;
+  padding: 15px;
+}
+
+.site-layout-sub-header-background {
+  background: #fff;
+}
+
+.main-header {
+  background: skyblue;
+  padding: 0px 25px;
+  line-height: 56px;
+}
+
+.site-layout-background {
+  background: #fff;
+}
