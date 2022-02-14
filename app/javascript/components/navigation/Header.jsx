@@ -17,6 +17,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import UserTable from '../tables/UserTable'
 
 const drawerWidth = 240;
 
@@ -111,11 +112,11 @@ const Header = () => {
               marginRight: '36px',
               ...(open && { display: 'none' }),
             }}
-          >
+          > 
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Mini variant drawer
+           
           </Typography>
         </Toolbar>
       </AppBar>
@@ -150,7 +151,7 @@ const Header = () => {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-        
+        <UserTable />
       </Box>
     </Box>
   );
