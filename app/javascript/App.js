@@ -28,7 +28,7 @@ const App = () => {
   const [collapsed, setCollapsed] = useState(false);
 
   useEffect(() => {
-    // navigate("/users");
+    navigate("/users");
   }, []);
 
   return (
