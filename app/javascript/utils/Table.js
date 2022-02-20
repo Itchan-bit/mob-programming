@@ -7,8 +7,10 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
-import { getUser } from "../services/userApi";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 
+import { getUser } from "../services/userApi";
 import { UserColumns } from "../constant/Columns";
 
 export default function StickyHeadTable() {
@@ -68,14 +70,32 @@ export default function StickyHeadTable() {
             {users
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((row) => {
-                console.log(row);
                 return (
                   <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
                     {UserColumns.map((column) => {
                       const value = row[column.id];
                       return (
                         <TableCell key={column.id} align={column.align}>
-                          {value}
+                          {column.id === "action" ? (
+                            <Box sx={{ "& button": { m: 1 } }}>
+                              <Button
+                                variant="outlined"
+                                size="small"
+                                color="primary"
+                              >
+                                Update
+                              </Button>
+                              <Button
+                                variant="outlined"
+                                size="small"
+                                color="error"
+                              >
+                                Delete
+                              </Button>
+                            </Box>
+                          ) : (
+                            value
+                          )}
                         </TableCell>
                       );
                     })}
